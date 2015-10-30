@@ -59,9 +59,9 @@ let vim_markdown_preview_temp_file = 1
 
 
 " word-wrap
-set tw=79
-set formatoptions+=t
-augroup vimrc_autocmds
-  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-  autocmd BufEnter * match OverLength /\%79v.*/
-augroup END
+ set tw=79
+ set formatoptions+=t
+" augroup vimrc_autocmds
+  " autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+  " autocmd BufEnter * match OverLength /\%79v.*/
+" augroup END
