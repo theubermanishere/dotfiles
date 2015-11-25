@@ -16,7 +16,7 @@ set number
 set splitbelow
 set splitright
 set timeoutlen=30
-:let mapleader = ","
+let mapleader = ","
 :map <leader>t :TComment<CR>
 :map <Up> gk
 :imap <Up> <C-o>gk
@@ -59,9 +59,15 @@ let vim_markdown_preview_temp_file = 1
 
 
 " word-wrap
- set tw=79
- set formatoptions+=t
+set wrap
+set linebreak
+set nolist " list disables linebreak
+set textwidth=79
+set formatoptions=lt
 " augroup vimrc_autocmds
   " autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
   " autocmd BufEnter * match OverLength /\%79v.*/
 " augroup END
+
+"Settings for .md files
+autocmd FileType md source /home/vinayak/dotfiles/vimmd.vim
